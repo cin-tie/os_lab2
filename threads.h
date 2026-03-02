@@ -8,7 +8,7 @@ struct ThreadData {
 	int size;
 	int min;
 	int max;
-	double avg;
+	double average;
 };
 
 DWORD WINAPI min_max(LPVOID lpParam);
