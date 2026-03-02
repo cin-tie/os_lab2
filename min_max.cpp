@@ -4,9 +4,9 @@
 using namespace std;
 
 DWORD WINAPI min_max(LPVOID lpParam){
-	ThreadDate* data = (ThreadData*)lpParam;
+	ThreadData* data = (ThreadData*)lpParam;
 	data->min = data->arr[0];
-	data->max = data->arra[0];
+	data->max = data->arr[0];
 
 	for(int i = 1; i < data->size; ++i){
 		if(data->arr[i] < data->min){

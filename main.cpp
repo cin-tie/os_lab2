@@ -4,10 +4,11 @@
 using namespace std;
 
 int main(){
+	int size;
 	cout << "Enter array size: ";
 	cin >> size;
 
-	arr = new int[size];
+	int* arr = new int[size];
 
 	cout << "Enter array elements: ";
 	for(int i = 0; i < size; ++i){
@@ -19,7 +20,7 @@ int main(){
 	data.size = size;
 
 	HANDLE hMinMax = CreateThread(NULL, 0, min_max, &data, 0, NULL);
-	HAMDLE hAverage = CreateThread(NULL, 0, average, &data, 0, NULL);
+	HANDLE hAverage = CreateThread(NULL, 0, average, &data, 0, NULL);
 
 	WaitForSingleObject(hMinMax, INFINITE);
 	WaitForSingleObject(hAverage, INFINITE);
