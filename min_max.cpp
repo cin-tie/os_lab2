@@ -1,6 +1,8 @@
 #include "threads.h"
 #include <iostream>
 
+using namespace std;
+
 DWORD WINAPI min_max(LPVOID lpParam){
 	ThreadDate* data = (ThreadData*)lpParam;
 	data->min = data->arr[0];
