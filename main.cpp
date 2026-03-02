@@ -1,13 +1,17 @@
-#include <window.h>
+#include "threads.h"
 #include <iostream>
-#include <clocale>
 
 using namespace std;
 
-int* arr;
-int size;
-int min_element;
-int max_element;
-double avg;
+int main(){
+	cout << "Enter array size: ";
+	cin >> size;
 
+	arr = new int[size];
 
+	cout << "Enter array elements: ";
+	for(int i = 0; i < size; ++i){
+		cin >> arr[i];
+	}
+
+}
